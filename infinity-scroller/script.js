@@ -2,7 +2,7 @@ const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');
 
 const count = 10;
-const apiKey = '7_BCkO8dJhpmDMlRufuKPN2rD1m3XG_OyJVd9LuL2P4';
+const apiKey = 'JJhcY59yJm9Ezqu1WJ9ynBkoHkl6bM1IJp915PqPEDU';
 const apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${count}`;
 
 let ready = false;
@@ -70,7 +70,8 @@ window.addEventListener('scroll', () => {
     window.innerHeight + window.scrollY >= document.body.offsetHeight - 768 &&
     ready
   ) {
-    console.log('hey');
+    ready = false;
+    getPhotos();
   }
 });
 
